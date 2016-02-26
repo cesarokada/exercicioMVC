@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Talentos2016Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_Curso">
+          <Key>
+            <PropertyRef Name="cod_curso" />
+          </Key>
+          <Property Name="cod_curso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome_curso" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Produto">
+          <Key>
+            <PropertyRef Name="cod_produto" />
+          </Key>
+          <Property Name="cod_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome_produto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="qtd_produto" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Talentos2016ModelStoreContainer">
+          <EntitySet Name="TB_Curso" EntityType="Self.TB_Curso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Produto" EntityType="Self.TB_Produto" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Talentos2016Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_Curso">
+          <Key>
+            <PropertyRef Name="cod_curso" />
+          </Key>
+          <Property Name="cod_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_curso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Produto">
+          <Key>
+            <PropertyRef Name="cod_produto" />
+          </Key>
+          <Property Name="cod_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_produto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qtd_produto" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Talentos2016Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_Curso" EntityType="Self.TB_Curso" />
+          <EntitySet Name="TB_Produto" EntityType="Self.TB_Produto" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Talentos2016ModelStoreContainer" CdmEntityContainer="Talentos2016Entities">
+          <EntitySetMapping Name="TB_Curso">
+            <EntityTypeMapping TypeName="Talentos2016Model.TB_Curso">
+              <MappingFragment StoreEntitySet="TB_Curso">
+                <ScalarProperty Name="cod_curso" ColumnName="cod_curso" />
+                <ScalarProperty Name="nome_curso" ColumnName="nome_curso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Produto">
+            <EntityTypeMapping TypeName="Talentos2016Model.TB_Produto">
+              <MappingFragment StoreEntitySet="TB_Produto">
+                <ScalarProperty Name="cod_produto" ColumnName="cod_produto" />
+                <ScalarProperty Name="nome_produto" ColumnName="nome_produto" />
+                <ScalarProperty Name="qtd_produto" ColumnName="qtd_produto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

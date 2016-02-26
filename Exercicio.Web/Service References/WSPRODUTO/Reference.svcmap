@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b326f014-076c-4acd-93de-5b093d4d893c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:20444/ProdutoSvc/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="5fc7d368-f79e-4453-9ded-08fcac37b653" SourceId="1" SourceUrl="http://localhost:20444/ProdutoSvc/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="a7ffec13-3fbf-45b8-9c49-a213616582d2" SourceId="1" SourceUrl="http://localhost:20444/ProdutoSvc/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="5b7d3ad1-5ad1-4179-a363-88fa8d25b6e7" SourceId="1" SourceUrl="http://localhost:20444/ProdutoSvc/?disco" />
+    <MetadataFile FileName="PordutoSvc.wsdl" MetadataType="Wsdl" ID="debf33a5-f0df-4c8d-b9af-9f9e536edddf" SourceId="1" SourceUrl="http://localhost:20444/ProdutoSvc/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="ccf2ae02-e3c3-42c3-a809-8440469e08cb" SourceId="1" SourceUrl="http://localhost:20444/ProdutoSvc/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
